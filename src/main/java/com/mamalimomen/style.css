@@ -1,0 +1,19 @@
+.table_style{
+    display: flex;
+    justify-content: center;
+    alignment: center;
+}
+
+tr:nth-child(even){
+    /*background-color: gray;*/
+}
+
+td{
+    text-align: center !important;
+    font-size: 25px;
+    font-family: "Adobe Devanagari", fantasy;
+}
+
+.button_style{
+    display: block;
+}

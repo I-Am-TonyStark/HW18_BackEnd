@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Search & Buy"/>
+    <meta name="keywords" content="HTML, CSS, Java, Servlet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Search/Buy page</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="style_1.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+<body>
+<div class="main-block">
+
+    <div id="search_form">
+        <h1>Search Travel</h1>
+        <hr>
+        <div class="formcontainer">
+            <div class="container">
+                <input list="cities" name="origin_cities" id="origin_cities" placeholder="Origin city"
+                       required="required">
+                <input list="cities" name="dest_cities" id="dest_cities" placeholder="Destination city"
+                       required="required">
+
+                <datalist name="cities" id="cities">
+                    <option value="TEHRAN">TEHRAN</option>
+                    <option value="TABRIZ">TABRIZ</option>
+                    <option value="SHIRAZ">SHIRAZ</option>
+                    <option value="MASHHAD">MASHHAD</option>
+                    <option value="QOM">QOM</option>
+                    <option value="KHOY">KHOY</option>
+                    <option value="ARDABIL">ARDABIL</option>
+                    <option value="ESFAHAN">ESFAHAN</option>
+                    <option value="ARAK">ARAK</option>
+                    <option value="ZANJAN">ZANJAN</option>
+                    <option value="QZVIN">QZVIN</option>
+                </datalist>
+
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div id="message" class="hidden">
+            </div>
+            <button id="search"><strong>Search</strong></button>
+        </div>
+
+        <div id="result" class="hidden">
+            <hr/>
+            <div id="table" class="box">
+                <table border="1" cellpadding="5" cellspacing="5">
+                    <thead>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="buy_form" class="hidden">
+        <h1>Buy Ticket</h1>
+        <div class="formcontainer">
+            <div class="container">
+                <div id="buy_table">
+                    <input type="hidden" name="travel_ID" id="travel_code" readonly>
+                    <table border="1" cellpadding="5" cellspacing="5">
+                        <tbody>
+
+                        <tr>
+                            <td>FullName</td>
+                            <td><input style="width: 100%" type="text" id="passenger" name="passenger_name" required></td>
+                        </tr>
+
+                        <tr>
+                            <td>Gender</td>
+                            <td>
+                                <div class="radio_button">
+                                    <div>
+                                        <label class="radio_label" for="male">Male</label>
+                                        <input type="radio" name="gender" id="male" value="MALE" required/></div>
+                                    <div>
+                                        <label class="radio_label" for="female">Female</label>
+                                        <input type="radio" name="gender" id="female" value="FEMALE" required/>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <button id="buy_button"><strong>Buy</strong></button>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
